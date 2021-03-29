@@ -1,8 +1,8 @@
-2886b4a817a347e249be7e4514dad409 *DESCRIPTION
-ecc26e7acc08c62e5b46e5852402ec1b *NAMESPACE
+d652a164b3737216082495ffd6a1b20b *DESCRIPTION
+b286b7667e1d7f7d92221436e7acab50 *NAMESPACE
 70bd6658a6f047e7e167fc5f941b338f *R/crude.R
 6f1ffe125ab8eead6f13b361fec0e48b *R/removeSparseTerms.R
-d73adf096db178ef645be7dbccc7d094 *R/runLDAShiny.R
+806a80ca383cfde0c27a6f10cef92c4f *R/runLDAShiny.R
 eb678b5959e1a1271f1ad9ba3efc416a *build/vignette.rds
 07e29e3e0f96ef94620d4c0efa376fae *data/crude.rda
 0904c74875c031721cdc8f3d91a239e8 *inst/doc/A_brief_introduction_to_LDAShiny.R
@@ -19,9 +19,9 @@ df52b60f2b84da2cafa23fca2a9fa0ff *inst/extdata/scopusJOSS.csv
 d968fcff1790ee17e865ae046491b33e *inst/img/flagSp.png
 c0d31b6170daab639e41c69979ad17f3 *inst/img/flagUK.png
 8c22edf4e25b15339616dcc8f375888c *inst/img/gplv3.png
-5a03c1124de5010719093d7bf7117e69 *inst/shinyLDA/global.R
-c6049d9ab1aaa040e5623c4e3a3c253b *inst/shinyLDA/server.R
-cebd25dff6ff3010696b19baaf98497f *inst/shinyLDA/ui.R
+8df1f7da789b8346b33e14702469f07f *inst/shinyLDA/global.R
+991e07cd7d203387db9d7279d4651929 *inst/shinyLDA/server.R
+654adc66901c9e69c0ee931325b12271 *inst/shinyLDA/ui.R
 54a715ab1b3617694e3ecdd93f5119af *inst/shinyLDA/www/A_brief_introduction_to_LDAShiny.html
 d49a000f54854eafe7ac5cb575276496 *inst/shinyLDA/www/Una_breve_introducci-n_a_LDAShiny.html
 4b7fee96282c7e90d6281ad4a0f7b1d5 *inst/shinyLDA/www/about.html

@@ -233,7 +233,6 @@ observe({
        z$freq <- colSums(as.matrix(z$dtmF))  #
        z$wf <- tibble::tibble(word=names(z$freq), freq=z$freq)
       beepr::beep(2)
-
     })
 
 
@@ -380,6 +379,7 @@ observe({
                                  stringsAsFactors = FALSE)
      beepr::beep(2)
      alist$end_time <- proc.time() - ptm
+
 })
 
 output$timeCoherence <- renderPrint({
@@ -793,6 +793,8 @@ set.seed(12345)
    dplyr::top_n(1, gamma) %>%
    ungroup()
  beepr::beep(2)
+
+
     })
 
    output$sum <- DT::renderDT({
@@ -859,13 +861,25 @@ output$theta <- DT::renderDT({
                                                'pdf',
                                                'print'),
                                    pagelength = 10,
-                                  lengthMenu = list(c(10, 25, 100, -1),
-                                                    c('10', '25', '100','All')
+                                  lengthMenu = list(c(10,100,20000,-1),
+                                                    c('10', '25', '10000','All')
                                                     )
                                   )
                     )%>% formatRound( columns= c("gamma"),digits=5)
 
    })
+
+output$downloadData <- downloadHandler(
+     filename = function() {
+       paste('data-', Sys.Date(), '.csv', sep='')
+     },
+     content = function(con) {
+       write.csv(elist$tidy_thetha, con)
+    }
+   )
+
+
+
 
    output$phi <- DT::renderDT({
      DT::datatable(data =elist$tidy_beta, extensions = 'Buttons',filter = 'top',
@@ -979,8 +993,8 @@ output$Alloca <- DT::renderDT({
    })
 
 #####################################end number topic
-   observe({
-     if (input$close > 0) stopApp()  # stop shiny
+  #observe({
+   #  if (input$Stop > 0) stopApp()  # stop shiny
+   #})
    })
-   })
-    # FINALFINAL
+

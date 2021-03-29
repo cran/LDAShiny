@@ -58,3 +58,18 @@ bsModalNoClose <- function(...) {
     b[[2]]$`data-keyboard` <- "false"
     return(b)
 }
+
+removeSparseTerms <- function (x, sparse)
+{
+    stopifnot(inherits(x, c("DocumentTermMatrix", "TermDocumentMatrix")),
+              is.numeric(sparse), sparse > 0, sparse < 1)
+    m <- if (inherits(x, "DocumentTermMatrix"))
+        t(x)
+    else x
+    t <- table(m$i) > m$ncol * (1 - sparse)
+    termIndex <- as.numeric(names(t[t]))
+    if (inherits(x, "DocumentTermMatrix"))
+        x[, termIndex]
+    else x[termIndex, ]
+}
+

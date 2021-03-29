@@ -1,7 +1,6 @@
 #' Shiny UI for LDAShiny package
 #'@import shiny
 #'@import shinydashboard
-#'@import shinydashboardPlus
 #' @param launch.browser If true, the system's default web browser will be launched automatically
 #' after the app is started. Defaults to true in interactive sessions only. This value of
 #' this parameter can also be a function to call with the application's URL.
